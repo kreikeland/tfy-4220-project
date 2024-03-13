@@ -2,7 +2,7 @@ import numpy as np
 from magnetic import B, M
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle
-
+import argparse
 
 R_e = 6.37e6 # radius of Earth, 10⁶m
 e = 1.602e-19 # elementary charge, C
@@ -58,7 +58,6 @@ def compute_trajectory_rk4(x0, v0, t0, tf, dt, q, m):
             k4_r = dt * rhs_r(v[i] + k3_r)
             x[i + 1] = x[i] + (1/6) * (k1_r + 2 * k2_r + 2 * k3_r + k4_r)
 
-            #print(v[i+1])
     return t, x, v
 
 def work(q,r,v):
@@ -72,27 +71,27 @@ def work(q,r,v):
     return (force*v).sum(1)
 
 def rhs_v(x, v, q, m):
+    '''
+    RHS of EOM for v
+    '''
     gamma = 1 / (np.sqrt(1-np.linalg.norm(v)**2/c**2))
     Bvec = np.array(B(x[0], x[1], x[2], M))
     return q / (gamma*m)* np.cross(v, Bvec) 
 
 def rhs_r(v):
+    '''
+    RHS of EOM for r
+    '''
     return v
 
-if __name__ == '__main__':
-    # assume unit mass and charge
-    # beware of units! magnetic field calculated in length units of R_e
-    v0 = np.array([0,0.01,0]) # units? R_e s⁻1
-    t0 = 0
-    tf = 10000
-    dt = 0.1
-    x0 = np.array([2,0,0]) # units? R_e?
-    q = 1000
-    m = 1
+def plot_traj_3d(r):
+    '''
+    Plot the 3d trajectory given the position vectors r
 
-    t, r, v = compute_trajectory_rk4(x0, v0, t0, tf, dt, q, m)
-    w = work(q,r,v)
-    print(np.sum(w))
+    input:
+        r: 3xNsteps array
+
+    '''
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
     ax.plot(r[:,0], r[:,1], r[:,2])
@@ -105,7 +104,23 @@ if __name__ == '__main__':
     y = np.sin(u)*np.sin(v)
     z = np.cos(v)
     ax.plot_wireframe(x, y, z, color="r")
-
     plt.show()
 
+
+if __name__ == '__main__':
+    # assume unit mass and charge
+    # beware of units! magnetic field calculated in length units of R_e
+    
+    v0 = np.array([1/np.sqrt(2),1/np.sqrt(2),0])*0.05 # units? R_e s⁻1
+    t0 = 0
+    tf = 10000
+    dt = 0.1
+    x0 = np.array([2,0,0]) # units? R_e?
+    q = 1e3
+    m = 1
+
+    t, r, v = compute_trajectory_rk4(x0, v0, t0, tf, dt, q, m)
+    w = work(q,r,v)
+    print(np.sum(w))
+    
 
