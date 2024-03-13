@@ -5,8 +5,6 @@ import matplotlib.cm as cm
 import argparse
 
 # constants
-R_e = 6.37 # radius of Earth, 10⁶m
-B_0 = 3.12e-5 # magnetic field at Earth's surface, T
 alpha = (23+11) * np.pi / 180 # angle of inclination of Earth's magnetic field, 11deg + 23deg
 M = 30.4e-6 * np.array([[np.cos(alpha), 0, -np.sin(alpha)],
                         [0,1,0],
@@ -36,8 +34,9 @@ if __name__ == '__main__':
     ax.streamplot(X, Z, Bx, Bz, color='k',linewidth=1,
                 density=2, arrowstyle='->', arrowsize=1.5)
     ax.add_patch(Circle((0, 0), 1, color='k', zorder=100))
-    p = ax.contourf(X, Z, By, cmap=cm.jet, levels=0) # contour for By, pos/neg
-    c = fig.colorbar(p)
+    # p = ax.contourf(X, Z, By, cmap=cm.jet, levels=0) # contour for By, pos/neg
+    # c = fig.colorbar(p)
+    # c.set_label('$B_{y}$')
     ax.set_aspect('equal')
     ax.set_xlabel('$x$ [$R_{E}$]')
     ax.set_ylabel('$z$ [$R_{E}$]')
@@ -47,15 +46,16 @@ if __name__ == '__main__':
     # Plot xy-plane
     x, y = np.linspace(-6, 6, 100), np.linspace(-6, 6, 100)
     X, Y = np.meshgrid(x, y)
-    Z = 2
+    Z = 0
     Bx, By, Bz = B(X, Y, Z, M)
 
     fig, ax = plt.subplots()
     ax.streamplot(X, Y, Bx, By, color='k',linewidth=1,
                 density=2, arrowstyle='->', arrowsize=1.5)
     ax.add_patch(Circle((0, 0), 1, color='k', zorder=100))
-    p = ax.contourf(X, Y, Bz, cmap=cm.jet, levels=0) # contour map for Bz, pos/neg
-    c = fig.colorbar(p)
+    # p = ax.contourf(X, Y, Bz, cmap=cm.jet, levels=0) # contour map for Bz, pos/neg
+    # c = fig.colorbar(p)
+    # c.set_label('$B_{z}$')
     ax.set_aspect('equal')
     ax.set_xlabel('$x$ [$R_{E}$]')
     ax.set_ylabel('$y$ [$R_{E}$]')
