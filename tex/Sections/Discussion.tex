@@ -1,11 +1,30 @@
 \section{Discussion}
-\textit{link motion shown in the trajectories to the theory}
-The trajectories for $|\bm{r}| > 6R_E$ might not make much sense as the dipole model of the magnetic field is not as valid for these distances.
+The trajectories shown in figure \ref{fig:trajectories} display both gyration and azimuthal drift, as well as confinement due to the magnetic mirrors present in the dipole field.
+For figures \ref{fig:traj-d} and \ref{fig:traj-h} however, the proton is not confined to the magnetoshpere.
+(\cite{chen_2015}) argues that a particle with small $v_\perp / v_{||}$ will escape if the magnetic field is not strong enough. 
+This may be the case as the magnetic field is weaker further away from the Earth. 
+One can also argue that it is not the case, as the trajectories in figures \ref{fig:traj-c} and \ref{fig:traj-g} are confined, and are almost as far away from the Earth.
+
+
+Interpreting the trajectories as the motions of charged particles from solar winds may be faulty in this case. 
+Specifically, the infalling of charged particles towards the north and south magnetic poles is not observed. 
+Still it is known that this is the cause of the auroras which have readily been observed (\textit{source?}). 
+This may be due to the discrepancy between our dipole model and the real magnetic field of the Earth.
+Additionally, the static orientation of the magnetic field wrt. the Sun may be a cause. 
+In our model, the magnetic dipole is tilted away from the Sun.
+The orientation of the magnetic field precesses with the Earth's axis of rotation as well as moving on its own due to the complicated dynamics of its origin (\textit{source}).
+This is not taken into account in our model. 
+Furthermore, as mentioned in the introduction, the dipole model is only a reasonable apporximation for $|\bm{r}| < 6R_E$.
+Our simulations thus suggest that the particles which reach the inner magnetosphere ($|\bm{r}| < R_E$) sufficiently close to the magnetic equator are confined to orbital motion around the Earth.
+They drift azimuthally and bounce between the magnetic mirrors, never reaching the north or south magnetic poles. 
+This is in accordance with the results of (\cite{soni_2021}).
+To fully grasp the trajectories of charged particles from solar winds then, one may need a more sophisticated model of the Earth's magnetic field.
 
 The results from considering the conservation of kinetic energy shows that the kinetic energy grows with time when the protons are close to the Earth. 
 This indicates that there is a need for a higher precision numerical scheme for this case.
-Moreover, the results show no significant sign of increased numerical instability for protons with lower energy. 
-This may be due to the higher precision of RK45 as implemented in SciPy compared to the ordinary RK4 method, as described in (\cite{DORMAND198019}).
-Thus it seems reasonable to apply RK45 for the task of simulating the trajectories of charged particles in Earth's magnetoshpere. 
-\textit{Can it be that the complexity of RK6 is higher than that of RK45, thus giving credit to RK45 as a superior method for this task seeing as it is less complex yet yields competitive results?}
+Moreover, the results show no significant sign of increased numerical instability for protons with lower energy as mentioned for RK4 in (\cite{soni_2021}). 
+This may be due to the higher precision of RK45, as implemented in SciPy, compared to the ordinary RK4 method (\cite{DORMAND198019}).
+Thus it seems reasonable to apply RK45 for the task of simulating the trajectories of charged protons in Earth's inner magnetoshpere for $|\bm{r}| \in (4R_E, 6R_E)$.
+For $|\bm{r}|<4R_E$ a higher precision numerical scheme may be needed. 
+The results of (\cite{soni_2021}) suggest that RK6 suffices.    
 

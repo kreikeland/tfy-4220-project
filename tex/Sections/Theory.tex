@@ -49,22 +49,34 @@ The position of the particle can be found by integrating the position-velocity r
 \end{equation}
 Equations (\ref{eq:dvdt}) and (\ref{eq:drdt}) are solved using RK45 (\cite{DORMAND198019}). 
 
-In a uniform magnetic field, the charged particles will gyrate around the magnetic field lines with a frequency of
+In a uniform magnetic field, the charged particles will gyrate around the magnetic field lines with the gyro-frequency
 \begin{equation}
     \omega_g = \frac{q|\bm{B}|}{\gamma m},
     \label{eq:omega-gyr}
 \end{equation}
 stemming from the cross product in (\ref{eq:dvdt}). 
+The gyro-radius is given (\cite{chen_2015}) by 
+\begin{equation}
+    r_g = \frac{mv_\perp}{q|\bm{B}|},
+    \label{eq:r-gyro}
+\end{equation}
+where $v_\perp$ is the component of $\bm{v}$ perpendicular to $\bm{B}$.
 The dipole field (\ref{eq:B-field-cart}) however, is non-uniform with a non-zero gradient $\nabla |\bm{B}|$. 
-This curvature and gradient of the field introduces two additional forms of motion: a periodic bouncing motion along the magnetic field lines, and an azimuthal drift around the axis of the magnetic dipole (\cite{soni_2021}). 
+This gradient and curvature of the field introduces two additional forms of motion: an azimuthal drift around the axis of the magnetic dipole, and a periodic bouncing motion along the magnetic field lines (\cite{chen_2015}). 
+
+If $\nabla |\bm{B}| \neq 0$ the gyro-radius (\ref{eq:r-gyro}) changes.
+In regions of higher field strength $r_g$ decreases. 
+Similarly, $r_g$ increases in regions of higher field strength. 
+This causes a drift motion perpendicular to $\nabla |\bm{B}|$. 
+
 Due to the component of $\bm{v}$ parallell to $\bm{B}$ in (\ref{eq:dvdt}), the particles move along the magnetic field lines.
-When the particle moves towards a region of higher $|\bm{B}|$, it reflects. \textit{why?}
-Thus the particle oscillates between these mirror points along the magnetic field lines.
+As the gradient $\nabla \bm{B}$ is parallell to $\bm{B}$ for the dipole field, there will be magnetic mirrors present (\cite{chen_2015}).
+These magnetic mirrors trap the charged particles by reflecting the velocity parallell to the field lines.
+Thus the particle oscillates between the magnetic mirrors along the magnetic field lines.
 %The frequency at which the particle bounces is given (\textit{source?}) as
 %\begin{equation}
 %    \omega_b = .
 %\end{equation}
-According to (\cite{soni_2021}), the gradient is responsible for the azimuthal drift motion. \textit{more info here?}
 %The frequency of the drift motion is given (\textit{source?}) as
 %\begin{equation}
 %    \omega_d = .
