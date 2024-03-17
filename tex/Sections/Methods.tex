@@ -1,0 +1,18 @@
+\section{Methods}
+For this analysis, different trajectories are computed for different initial conditions. 
+The simulations are run for protons of kinetic energy between 100eV and 10MeV.
+The initial velocities of the protons is then given by $\bm{v_0} = [v,0,0]$ where $v$ is given by equation (\ref{eq:v}) with $m=m_p$.
+The initial positions of the protons are given as
+\begin{align*}
+    x_0 &\in [-2R_E, -12R_E], \\
+    y_0 &\in [-R_E, R_E], \\
+    z_0 &\in [-R_E,R_E].  
+\end{align*}
+The values for $x_0,\,y_0,\,z_0$ are sampled evenly in the given intervals with a sample size of $n_x=11$, $n_y,\,n_z = 3$. 
+Thus, for each level of kinetic energy, $n_x \cdot n_y \cdot n_z = 99$ trajectories are computed.
+All protons are simulated as particles travelling from the Sun to the Earth, i.e. $x_0 < 0$ and $v_y, v_z = 0$.
+All trajectories are computed for a timespan of 120s. 
+
+The simulation code is written in the Python programming language. 
+The equations of motion (\ref{eq:dvdt}) and (\ref{eq:drdt}) are solved using RK45 as implemented in the Python library SciPy (\cite{scipy_ivp}).
+Consult the supplementary material (\textit{include?}) for further details.  

@@ -1,0 +1,45 @@
+% Author - Kasper Eikeland - IFY NTNU
+\documentclass{article}
+
+% Importing document settings from our file "packages.sty"
+\usepackage{packages}
+
+% Beginning of document
+\begin{document}
+
+% Inserting title page
+\import{./}{title}
+
+%\import{./Sections/}{Abstract}
+
+\noindent\rule[0.5ex]{\linewidth}{0.5pt}
+
+\begin{multicols}{2}
+% Introduction explaining this LaTeX-template
+\import{./Sections/}{Introduction}
+
+\import{./Sections/}{Theory}
+
+
+\import{./Sections/}{Methods}
+
+% \import{./Sections/}{Validation}
+
+\import{./Sections/}{Results}
+
+\import{./Sections/}{Discussion}
+
+
+\import{./Sections/}{Conclusion}
+% Printing bibliography
+\newpage
+\printbibliography[heading = bibintoc, title = References]    % 'bibintoc' inserts our bibliography into the table of contents
+
+% Inserting appendix with separate settings
+% \addappendix
+% \import{./Appendices/}{example_appendix}
+
+% End of document
+
+\end{multicols}
+\end{document}

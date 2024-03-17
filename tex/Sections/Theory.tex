@@ -1,0 +1,72 @@
+\section{Theory}
+
+As a magnetic dipole field, the magnetic field of the Earth is given in coordinate-free form (\cite{griffiths_2024}) as 
+\begin{equation}
+    \bm B ( \bm r) = \frac{\mu_0}{4\pi r^3} [3(\bm m \cdot \hat{\bm r})\hat{\bm r} - \bm m],
+    \label{eq:B_dip}
+\end{equation}
+where $\bm{m}$ is the magnetic dipole moment of the Earth, $\mu_0$ is the vacuum permeability and $\bm{r} = (x,y,z)$ is the position vector. 
+Equation (\ref{eq:B_dip}) can be written in cartesian coordinates as 
+\begin{equation}
+    \bm{B}(\bm{r}) =\frac{\mu_0}{4\pi r^5} 
+    \small{\begin{bmatrix}
+        3x^2 + r^2 & 3xy & 3xz \\
+        3xy & 3y^2 + r^2 & 3yz \\
+        3xz & 3yz & 3z^2 - r^2
+    \end{bmatrix}} \bm{m}.
+    \label{eq:B-field-cart}
+\end{equation}
+At the magnetic equator ($\bm{r} \perp \bm{m}$), the magnetic field strength is measured to $B_0 \approx 3.07\times 10^{-5}$T (\cite{soni_2021}).
+Therefore, the magnitude of the Earths magnetic dipole moment is given by (\ref{eq:B-field-cart}) as 
+\begin{equation}
+    m = \frac{4\pi}{\mu_0} R_E^3 B_0,
+\end{equation}
+where $R_E\approx6370$km is the radius of the Earth. 
+In this simulation the Earth is placed at the origin of the coordinate system, and the $x$-axis is along the Sun-Earth axis. 
+The magnetic dipole moment $\bm{m}$ is rotated $11\degree + 23\degree$ around the $y$-axis.
+
+The relativistic equation of motion for a charged particle of charge $q$ and mass $m$ moving in a magnetic field is given by the Lorentz force
+\begin{equation}
+    \gamma m \frac{\text{d}\bm{v}}{\text{d}t} = q\bm{v} \times \bm{B}(\bm{r}),
+    \label{eq:dvdt}
+\end{equation}
+where $\bm{v}$ is the velocity vector of the particle, and $\gamma$ is the Lorentz factor given as
+\begin{equation}
+    \gamma = \frac{1}{\sqrt{1-v^2/c^2}},
+\end{equation}
+where $c$ is the speed of light. 
+For a particle moving only in a magnetic field, $\gamma$ is constant, as it only depends on the squared magnitude of the velocity, which is unchanged by the Lorentz force (\cite{griffiths_2024}). 
+The magnitude of the velocity of the particle is obtained from the kinetic energy of the paricle as
+\begin{equation}
+    v = c \sqrt{1-\left ( \frac{mc^2}{mc^2 + K}\right )^2}
+    \label{eq:v}
+\end{equation}
+where $K$ is the kinetic energy. 
+The position of the particle can be found by integrating the position-velocity relation
+\begin{equation}
+    \frac{\text{d}\bm{r}}{\text{d}t} = \bm{v}.
+    \label{eq:drdt}
+\end{equation}
+Equations (\ref{eq:dvdt}) and (\ref{eq:drdt}) are solved using RK45 (\cite{DORMAND198019}). 
+
+In a uniform magnetic field, the charged particles will gyrate around the magnetic field lines with a frequency of
+\begin{equation}
+    \omega_g = \frac{q|\bm{B}|}{\gamma m},
+    \label{eq:omega-gyr}
+\end{equation}
+stemming from the cross product in (\ref{eq:dvdt}). 
+The dipole field (\ref{eq:B-field-cart}) however, is non-uniform with a non-zero gradient $\nabla |\bm{B}|$. 
+This curvature and gradient of the field introduces two additional forms of motion: a periodic bouncing motion along the magnetic field lines, and an azimuthal drift around the axis of the magnetic dipole (\cite{soni_2021}). 
+Due to the component of $\bm{v}$ parallell to $\bm{B}$ in (\ref{eq:dvdt}), the particles move along the magnetic field lines. \textit{reference?}
+When the particle moves towards a region of higher $|\bm{B}|$, it reflects. \textit{why?}
+Thus the particle oscillates between these mirror points along the magnetic field lines.
+The frequency at which the particle bounces is given (\textit{source?}) as
+\begin{equation}
+    \omega_b = .
+\end{equation}
+According to (\cite{soni_2021}), the gradient is responsible for the azimuthal drift motion. 
+The frequency of the drift motion is given (\textit{source?}) as
+\begin{equation}
+    \omega_d = .
+\end{equation}
+

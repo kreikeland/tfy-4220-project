@@ -1,0 +1,181 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{DORMAND198019}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=73df3ed0b29a46f298503ce5a624a142}{%
+           family={Dormand},
+           familyi={D\bibinitperiod},
+           given={J.R.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e011d9569ed2dc66f2ae2bf1bb0c30e}{%
+           family={Prince},
+           familyi={P\bibinitperiod},
+           given={P.J.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1bd702d7326363c3232f1ff6810aa165}
+      \strng{fullhash}{1bd702d7326363c3232f1ff6810aa165}
+      \strng{bibnamehash}{1bd702d7326363c3232f1ff6810aa165}
+      \strng{authorbibnamehash}{1bd702d7326363c3232f1ff6810aa165}
+      \strng{authornamehash}{1bd702d7326363c3232f1ff6810aa165}
+      \strng{authorfullhash}{1bd702d7326363c3232f1ff6810aa165}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A family of embedded Runge-Kutta formulae RK5 (4) are derived. From these are presented formulae which have (a) ‘small’ principal truncation terms in the fifth order and (b) extended regions of absolute stability.}
+      \field{issn}{0377-0427}
+      \field{journaltitle}{Journal of Computational and Applied Mathematics}
+      \field{number}{1}
+      \field{title}{A family of embedded Runge-Kutta formulae}
+      \field{volume}{6}
+      \field{year}{1980}
+      \field{pages}{19\bibrangedash 26}
+      \range{pages}{8}
+      \verb{doi}
+      \verb \hyperref{https://doi.org/10.1016/0771-050X(80)90013-3}
+      \endverb
+      \verb{urlraw}
+      \verb \hyperref{https://www.sciencedirect.com/science/article/pii/0771050X80900133}
+      \endverb
+      \verb{url}
+      \verb %5Chyperref%7Bhttps://www.sciencedirect.com/science/article/pii/0771050X80900133%7D
+      \endverb
+    \endentry
+    \entry{griffiths_2024}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a00328547222c4a2a201442ee59dccfd}{%
+           family={Griffiths},
+           familyi={G\bibinitperiod},
+           given={David\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{fullhash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{bibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorbibnamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authornamehash}{a00328547222c4a2a201442ee59dccfd}
+      \strng{authorfullhash}{a00328547222c4a2a201442ee59dccfd}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{5}
+      \field{title}{Introduction to Electrodynamics}
+      \field{year}{2024}
+    \endentry
+    \entry{scipy_ivp}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1821d8d35cdf635d02f5c556e2bb5937}{%
+           family={SciPy},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1821d8d35cdf635d02f5c556e2bb5937}
+      \strng{fullhash}{1821d8d35cdf635d02f5c556e2bb5937}
+      \strng{bibnamehash}{1821d8d35cdf635d02f5c556e2bb5937}
+      \strng{authorbibnamehash}{1821d8d35cdf635d02f5c556e2bb5937}
+      \strng{authornamehash}{1821d8d35cdf635d02f5c556e2bb5937}
+      \strng{authorfullhash}{1821d8d35cdf635d02f5c556e2bb5937}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{scipy.integrate.solve{\_}ivp - SciPy v1.12.0 Manual}
+      \field{urlday}{15}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb \hyperref{https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html}
+      \endverb
+      \verb{url}
+      \verb %5Chyperref%7Bhttps://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html%7D
+      \endverb
+    \endentry
+    \entry{soni_2021}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=f39e53dd5190e4d99eaa8d1a75200a66}{%
+           family={Soni},
+           familyi={S\bibinitperiod},
+           given={Pankaj\bibnamedelima K.},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6a17a3fc979493e0d9f0a289a802f199}{%
+           family={Kakad},
+           familyi={K\bibinitperiod},
+           given={Bharati},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b31791f32f520d976eeb5a4b2957001c}{%
+           family={Kakad},
+           familyi={K\bibinitperiod},
+           given={Amar},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ab8782973f086984f659688b8e4d8f42}
+      \strng{fullhash}{1a5b0126c7181417755009e3b1404c6e}
+      \strng{bibnamehash}{1a5b0126c7181417755009e3b1404c6e}
+      \strng{authorbibnamehash}{1a5b0126c7181417755009e3b1404c6e}
+      \strng{authornamehash}{ab8782973f086984f659688b8e4d8f42}
+      \strng{authorfullhash}{1a5b0126c7181417755009e3b1404c6e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0273-1177}
+      \field{journaltitle}{Advances in Space Research}
+      \field{number}{2}
+      \field{title}{Simulation study of motion of charged particles trapped in Earth’s magnetosphere}
+      \field{volume}{67}
+      \field{year}{2021}
+      \field{pages}{749\bibrangedash 761}
+      \range{pages}{13}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.asr.2020.10.020
+      \endverb
+      \verb{urlraw}
+      \verb \hyperref{https://www.sciencedirect.com/science/article/pii/S0273117720307481}
+      \endverb
+      \verb{url}
+      \verb %5Chyperref%7Bhttps://www.sciencedirect.com/science/article/pii/S0273117720307481%7D
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,16 @@
+\section{Introduction}
+The charged particles originating from solar winds ionoze the gas in the upper atmosphere of the Earth, which in turn gives rise to the auroras seen in the nightsky of the Northern hemisphere. (\textit{source?}) 
+In this study we seek to better understand the motion and trajectories of these charged particles subject to the Lorentz force from the magnetic field of the Earth. 
+
+To simulate the trajectories of these charged particles, the magnetic field of the Earth is modelled  as a dipole field. 
+This model is only sufficiently accurate for distances less than $6R_E$ (cite Baumjohann and Treumann book). 
+A more accurate model would be the double-dipole model of (cite earth magnetic field paper).
+For the sake of simplicity we compute the trajectories in the dipole model, even for initial positions of magnitude >$6R_E$. 
+This is to simulate the particles travelling from the Sun to the Earth.
+The magnetic north pole is tilted around 11$\degree$ away from the rotational axis of the Earth, which itself is tilted at about $23\degree$ from the Earth-Sun ecliptic.
+
+According to (\cite{soni_2021}) the problem of computing the trajectories for solar wind particles requires higher numerical precision than that of RK4. 
+This is because of numerical instabilities which arise for the trajectories of lower energy protons and electrons. 
+Still, the authors argue that the charged particles from solar winds are accelerated to $\sim$MeV speeds, which make them suitable for simulation using fourth order Runge-Kutta methods. 
+For this study we compute the trajectories of protons with a kinetic energy between 100eV and 10MeV  using RK45.
+The resulting trajectories are validated by considering the conservation of the kinetic energy.
