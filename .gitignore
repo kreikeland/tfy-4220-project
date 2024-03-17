@@ -1,0 +1,8 @@
+__pycache__/
+trajectories/
+figures/
+tex/main.aux
+tex/main.fdb_latexmk
+tex/main.fls
+tex/main.log
+tex/main.synctex.gz
