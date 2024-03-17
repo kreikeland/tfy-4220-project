@@ -43,12 +43,14 @@
             ]{biblatex}
 \addbibresource{references.bib}     % Adding our file containing the references
 % \addbibresource{reference_2.bib} is possible if we want to add several reference files
+\usepackage{etoolbox}
+\apptocmd{\thebibliography}{\raggedright}{}{}
+\usepackage{hyperref}
 
 \usepackage{caption}        % Enables controlling the look and feel of captions, see package documentation
 \usepackage{subcaption}     % Recommended when making sub-figures
 \usepackage[nottoc]{tocbibind}  % Includes Bibliography, Index, list of Listing etc. to table of contents
 \newcommand{\source}[1]{\vspace{-4pt} \caption*{\hfill \footnotesize{Source: {#1}} } }   % Easily insert sources in images
-\usepackage[hidelinks]{hyperref}
 
 % --- Code ---
 \usepackage{minted} % Includes several programming languages and styles, visit --https://www.ntnu.no/wiki/display/imtsoftware/Code+in+LaTeX-- for more information and examples
